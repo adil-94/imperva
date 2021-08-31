@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from "react-redux";
+import store from './store/index'
+import RouteProvider from './route_provider'
+import Header from './container-components/header'
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <React.Fragment>
+    <Provider store={store}>
+        <Header />
+        <RouteProvider />
+    </Provider>
+  </React.Fragment>,
   document.getElementById('root')
 );
 

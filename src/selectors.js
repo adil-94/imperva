@@ -1,0 +1,1 @@
+export const digestedIds = (state) => state.impervaReducer.digestedIds;
